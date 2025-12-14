@@ -1,16 +1,16 @@
 class Tsql < Formula
   desc "A modern, keyboard-first PostgreSQL CLI"
   homepage "https://github.com/fcoury/tsql"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/fcoury/tsql/releases/download/v#{version}/tsql-aarch64-apple-darwin.tar.gz"
-      sha256 "126feba82b34c34d515aad79a13f852a1a46b48a60046af1c0ecbcbc9772a824"
+      sha256 "89dcf7e41505b5e28e4e16010b8d45440dce498f510edb1f652956f71eb13165"
     else
       url "https://github.com/fcoury/tsql/releases/download/v#{version}/tsql-x86_64-apple-darwin.tar.gz"
-      sha256 "4b1f673615c99e0e17decf7fbfc651d1e9225d2365470029c36aa0385b46754b"
+      sha256 "6a08d9f6886a4683ea1020bbe65130aff091a240f1a5bc774e66f6b829193dcb"
     end
   end
 
