@@ -5,15 +5,15 @@ class Tsql < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fcoury/tsql/releases/download/v0.5.0/tsql-aarch64-apple-darwin.tar.gz"
-      sha256 "9670201266f970ef14b12aaa626b7051de800b6ca9685c51d6e1463e94940eac"
+      url "https://github.com/fcoury/tsql/releases/download/v0.6.0/tsql-aarch64-apple-darwin.tar.gz"
+      sha256 "11748cbdf707159be1c18e71fc770681b8172082318009df21a03cee38010b54"
     else
-      url "https://github.com/fcoury/tsql/releases/download/v0.5.0/tsql-x86_64-apple-darwin.tar.gz"
-      sha256 "21bb964bab3f262d4fd3d4e567402546a65a4c03eff65298a2f06d9035ddf8f8"
+      url "https://github.com/fcoury/tsql/releases/download/v0.6.0/tsql-x86_64-apple-darwin.tar.gz"
+      sha256 "2936191c2b07b512c68e1edc4849bfe9fb44b08f1f4f4316926e5dd5725e65d9"
     end
   elsif OS.linux?
-    url "https://github.com/fcoury/tsql/releases/download/v0.5.0/tsql-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "64f6f78946a71fcc3c5adce8d86a6adfab069de1346b98688309a8e3bd4f2a87"
+    url "https://github.com/fcoury/tsql/releases/download/v0.6.0/tsql-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "2e355fb6a6efa9b8901fdf9a6b53817ed715c9c230a9a7a2b90bfe63780de430"
   end
 
   def install
@@ -21,6 +21,6 @@ class Tsql < Formula
   end
 
   test do
-    assert_match "0.5.0", shell_output("#{bin}/tsql --version")
+    assert_match "0.6.0", shell_output("#{bin}/tsql --version")
   end
 end
